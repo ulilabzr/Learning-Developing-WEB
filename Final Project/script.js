@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let pos = 0;
   const speed = 1;
 
-  text.innerHTML = text.innerHTML + text.innerHTML;
+  text.innerHTML = text.innerHTML + " \u00A0 \u00A0 " + text.innerHTML;
 
   function move() {
     pos -= speed;
@@ -13,6 +13,5 @@ document.addEventListener("DOMContentLoaded", () => {
     text.style.transform = `translateX(${pos}px)`;
     requestAnimationFrame(move);
   }
-
   move();
 });
