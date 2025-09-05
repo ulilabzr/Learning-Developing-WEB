@@ -1,14 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
   const text = document.getElementById("marquee-text");
-  let pos = text.offsetWidth;
+  let pos = 0;
+  const speed = 1;
+
+  text.innerHTML = text.innerHTML + text.innerHTML;
 
   function move() {
-    pos--;
-    if (pos < -text.offsetWidth) {
-      pos = window.innerWidth; // balik ke kanan layar
+    pos -= speed;
+    if (Math.abs(pos) >= text.scrollWidth / 2) {
+      pos = 0;
     }
     text.style.transform = `translateX(${pos}px)`;
-    requestAnimationFrame(move); // animasi smooth
+    requestAnimationFrame(move);
   }
 
   move();

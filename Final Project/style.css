@@ -1,4 +1,4 @@
-/* Responsive Navbar */
+
 .nav-toggle {
   display: none;
   background: none;
@@ -93,22 +93,21 @@ body {
   font-weight: 600;
 }
 
+/* MARQUEE */
+
 .marquee {
   overflow: hidden;
   white-space: nowrap;
-  background: #f0f0f0;
-  padding: 10px 0;
-  border-top: 2px solid #0052cc;
-  border-bottom: 2px solid #0052cc;
+  width: 100%;
   position: relative;
 }
-
 #marquee-text {
   display: inline-block;
-  padding-left: 100%;
+  white-space: nowrap;
+  will-change: transform;
   font-weight: bold;
   color: #0052cc;
-  font-size: 1.2rem;
+  font-size: 24px;
 }
 
 /* ABOUT */
@@ -121,8 +120,13 @@ body {
 
 .about h1 {
   font-family: "Lobster", cursive;
-  font-size: 2rem;
+  font-size: 124px;
   color: #0052cc;
+}
+
+.about p {
+  font-size: 32px;
+  margin-top: 1rem;
 }
 
 .profile {
@@ -130,7 +134,7 @@ body {
 }
 
 .profile img {
-  width: 200px;
+  width: 300px;
   border-radius: 8px;
   margin-bottom: 1rem;
 }
@@ -161,11 +165,25 @@ body {
   gap: 1rem;
 }
 
+.experience-tools .tools2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 .experience-tools .tools span {
   background: #0052cc;
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 5px;
+}
+
+.experience-tools .tools2 span {
+  background: #0052cc;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-top: 2rem;
 }
 
 /* PROJECTS */
@@ -185,7 +203,7 @@ body {
 
 .project-list img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 40px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -195,4 +213,14 @@ body {
   color: #fff;
   padding: 2rem;
   text-align: center;
+}
+
+.site-footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.site-footer a:hover {
+  color: #ffd700;
+  text-decoration: underline;
 }
