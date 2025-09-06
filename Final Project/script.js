@@ -21,9 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   navToggle.addEventListener("click", () => {
     navList.classList.toggle("nav-open");
+    const hamburger = navToggle.querySelector(".hamburger");
+    hamburger.classList.toggle("close", navList.classList.contains("nav-open"));
   });
 
-  // Optional: close nav when clicking outside
+  // Close nav when clicking outside
   document.addEventListener("click", (e) => {
     if (
       navList.classList.contains("nav-open") &&
@@ -31,6 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
       !navToggle.contains(e.target)
     ) {
       navList.classList.remove("nav-open");
+      const hamburger = navToggle.querySelector(".hamburger");
+      hamburger.classList.remove("close");
     }
   });
 });
