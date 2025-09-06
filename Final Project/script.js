@@ -14,4 +14,23 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(move);
   }
   move();
+
+  // Hamburger menu toggle
+  const navToggle = document.getElementById("nav-toggle");
+  const navList = document.getElementById("nav-list");
+
+  navToggle.addEventListener("click", () => {
+    navList.classList.toggle("nav-open");
+  });
+
+  // Optional: close nav when clicking outside
+  document.addEventListener("click", (e) => {
+    if (
+      navList.classList.contains("nav-open") &&
+      !navList.contains(e.target) &&
+      !navToggle.contains(e.target)
+    ) {
+      navList.classList.remove("nav-open");
+    }
+  });
 });
